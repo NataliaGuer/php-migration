@@ -15,9 +15,14 @@
         "symfony/yaml": "7.3.*"
     },
     "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^3.13"
     },
     "config": {
         "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
             "symfony/flex": true,
             "symfony/runtime": true
@@ -50,8 +55,10 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "set-git-hooks": "sh ./scripts/set-git-hooks.sh",
         "post-install-cmd": [
-            "@auto-scripts"
+            "@auto-scripts",
+            "@set-git-hooks"
         ],
         "post-update-cmd": [
             "@auto-scripts"
