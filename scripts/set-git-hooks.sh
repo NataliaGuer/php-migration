@@ -1,1 +1,1 @@
-git config core.hooksPath ./.githooks
+cp scripts/.githooks/pre-commit .git/hooks 

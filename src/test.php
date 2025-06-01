@@ -1,6 +1,5 @@
 <?php
 
-//commento per modifica
 // 1. Funzione each() deprecata da PHP 7.2, rimossa in PHP 8.0
 $arr = ['a' => 1, 'b' => 2];
 reset($arr);
