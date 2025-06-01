@@ -3,13 +3,13 @@
 
 # Blocca lo script in caso di errore
 set -e
-echo "🪝 pre-commit hook"
+echo -e "🪝 pre-commit hook\n"
 
 # Trova tutti i file PHP modificati (aggiunti, copiati, modificati, rinominati)
 changed_php_files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.php$' || true)
 
 if [ -z "$changed_php_files" ]; then
-    echo "✅ Nessun file PHP modificato."
+    echo -n "✅ Nessun file PHP modificato.\n"
     exit 0
 fi
 
