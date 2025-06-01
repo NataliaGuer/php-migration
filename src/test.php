@@ -1,5 +1,7 @@
 <?php
 
+
+//test
 // 1. Funzione each() deprecata da PHP 7.2, rimossa in PHP 8.0
 $arr = ['a' => 1, 'b' => 2];
 reset($arr);
@@ -36,12 +38,17 @@ function useVar() {
 
 echo useVar();
 
-// 6. Uso di una funzione con il nome di una parola chiave riservata (PHP 8.0+)
-function match() {
-    return 'this is fine in 7.2, but "match" is a keyword in PHP 8.0+';
-}
 
-echo match();
+class mixed {}
+
+$mixed = new mixed();
+
+// 6. Uso di una funzione con il nome di una parola chiave riservata (PHP 8.0+)
+// function match() {
+//     return 'this is fine in 7.2, but "match" is a keyword in PHP 8.0+';
+// }
+
+// echo match();
 
 // 7. Riferimenti a oggetti in maniera non sicura (modifica in PHP 8.0+)
 function updateObject(&$obj) {
